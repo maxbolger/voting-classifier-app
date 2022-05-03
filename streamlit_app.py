@@ -211,7 +211,7 @@ else:
         with col3:
             st.write('')
 
-        col1, col2, col3 = st.columns([0.2, 2, 0.35])
+        col1, col2, col3 = st.columns([.00001, 16, .00001])
         with col1:
             st.write('')
         with col2:

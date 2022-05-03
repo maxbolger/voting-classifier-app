@@ -211,19 +211,13 @@ else:
         with col3:
             st.write('')
 
-        col1, col2, col3 = st.columns([.00001, 16, .00001])
-        with col1:
-            st.write('')
-        with col2:
-            st.dataframe(
-                (metrics_df
-                        .style
-                        .background_gradient(cmap='Blues', subset=['accuracy']).set_precision(4)
-                        .background_gradient(cmap='Blues_r', subset=['log_loss']).set_precision(4)
-                        .background_gradient(cmap='Blues', subset=['precision']).set_precision(4)
-                        .background_gradient(cmap='Blues', subset=['recall']).set_precision(4)
-                        # .background_gradient(cmap='Blues', subset=['roc_auc']).set_precision(4) # takes too long
-                        )
-                )
-        with col3:
-            st.write('')
+        st.dataframe(
+            (metrics_df
+                    .style
+                    .background_gradient(cmap='Blues', subset=['accuracy']).set_precision(4)
+                    .background_gradient(cmap='Blues_r', subset=['log_loss']).set_precision(4)
+                    .background_gradient(cmap='Blues', subset=['precision']).set_precision(4)
+                    .background_gradient(cmap='Blues', subset=['recall']).set_precision(4)
+                    # .background_gradient(cmap='Blues', subset=['roc_auc']).set_precision(4) # takes too long
+                    )
+            )
